@@ -7,15 +7,17 @@ import { LayoutComponent } from './component/common/layout/layout.component';
 import { HomeComponent } from './component/pages/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 import { FooterComponent } from './component/common/footer/footer.component';
-import {MatTreeModule} from '@angular/material/tree';
+import { MatTreeModule } from '@angular/material/tree';
 import { SidebarComponent } from './component/common/sidebar/sidebar.component';
-import {MatCheckboxModule} from '@angular/material/checkbox';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NdhsMapComponent } from './component/pages/ndhs-map/ndhs-map.component';
+import { LayoutInnerComponent } from './component/common/layout-inner/layout-inner.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     HomeComponent,
     FooterComponent,
     SidebarComponent,
+    NdhsMapComponent,
+    LayoutInnerComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,9 +42,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MatButtonModule,
     MatTreeModule,
     MatCheckboxModule,
-    MatFormFieldModule
+    MatFormFieldModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

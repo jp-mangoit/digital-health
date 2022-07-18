@@ -1,32 +1,47 @@
 import { Component, OnInit } from '@angular/core';
-declare var $: any;
+import { NestedTreeControl } from '@angular/cdk/tree';
+import { MatTreeNestedDataSource } from '@angular/material/tree';
 
+const TREE_DATA: any = [
+  {
+    name: 'NDHS map',
+    children: [
+      {
+        name: 'Countries',
+        children: [
+          {
+            name: 'View Data',
+            children: [
+              { name: 'Present Development' },
+              { name: 'Prospective Development' },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'Comparative Results',
+        children: [
+        ],
+      },
+    ],
+  },
+];
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.css']
+  styleUrls: ['./sidebar.component.css'],
 })
 export class SidebarComponent implements OnInit {
+  dataSource = new MatTreeNestedDataSource();
+  treeControl = new NestedTreeControl((node: any) => node.children);
 
-  constructor() { 
-    
+  constructor() {
+    this.dataSource.data = TREE_DATA;
   }
 
-  ngOnInit() {
-    
-  
-  }
-  public ngInit() {
-    $('#tree').tree({
-      dataSource: [
-        { text: 'North America', children: [ { text: 'USA', children: [ { text: 'California' }, { text: 'Miami' } ] }, { text: 'Canada' },  { text: 'Mexico' } ] },
-        { text: 'Europe', children: [ { text: 'France' },  { text: 'Spain' },  { text: 'Italy' } ] },
-        { text: 'South America', children: [ { text: 'Brazil' },  { text: 'Argentina' },  { text: 'Columbia' } ] }
-      ],
-      width: 500,
-      uiLibrary: 'bootstrap',
-      checkboxes: true
-    });
-  }
+  hasChild = (_: number, node: any) =>
+    !!node.children && node.children.length > 0;
+
+  ngOnInit(): void {}
 }

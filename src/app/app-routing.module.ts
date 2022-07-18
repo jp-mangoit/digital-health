@@ -4,6 +4,8 @@ import { HeaderInnerComponent } from './component/common/header-inner/header-inn
 import { HeaderOuterComponent } from './component/common/header-outer/header-outer.component';
 import { HomeComponent } from './component/pages/home/home.component';
 import { LayoutComponent } from './component/common/layout/layout.component';
+import { LayoutInnerComponent } from './component/common/layout-inner/layout-inner.component';
+import { NdhsMapComponent } from './component/pages/ndhs-map/ndhs-map.component';
 
 const routes: Routes = [
   {
@@ -27,6 +29,25 @@ const routes: Routes = [
         path: 'home',
         component: HomeComponent,
         data: { title: 'home' }
+      },
+    ]
+  },
+  {
+    path: '', component: LayoutInnerComponent,  children:  [
+      {
+        path: 'Headerinner',
+        component: HeaderInnerComponent,
+        data: { title: 'header' }
+      },
+      {
+        path: 'Headerouter',
+        component: HeaderOuterComponent,
+        data: { title: 'header-outer' }
+      },
+      {
+        path: 'NdhsMap',
+        component: NdhsMapComponent,
+        data: { title: 'NDHS-Map' }
       },
     ]
   },
