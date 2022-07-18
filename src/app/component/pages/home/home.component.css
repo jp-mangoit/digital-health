@@ -1,0 +1,74 @@
+div#home-content-header {
+    margin-top: 5rem;
+    border-bottom: 1px solid #ccc;
+}
+::ng-deep .mat-toolbar-single-row {
+    height: 95px;
+}
+.home-heading h1:before {
+    position: absolute;
+    width: 100px;
+    height: 4px;
+    background: #64D3BB;
+    content: '';
+    bottom: -16px;
+}
+.home-heading h1 {
+    color: #5380CD;
+    font-weight: 500;
+    font-size: 28px;
+    position: relative;
+}
+.home-content h1 {
+    font-size: 30px;
+    color: #5380CD;
+}
+.home-content p {
+    color: #5380CD;
+    font-size: 15px;
+    line-height: 30px;
+}
+.home-content {
+    max-width: 900px;
+    margin: 2rem auto;
+}
+div#home-content-header .content-area {
+    max-width: 900px;
+    margin: 0 auto;
+}
+a.link {
+    text-decoration: underline !important;
+    font-weight: 500;
+    color: #5380CD;
+}
+.card.image-card h2 {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    line-height: 40px;
+}
+.card.image-card:before {
+    position: absolute;
+    background: rgb(0 0 0 / 20%);
+    width: 100%;
+    height: 100%;
+    content: '';
+    z-index: 1;
+}
+.card.image-card img {
+    position: relative;
+}
+.home-content button {
+    background: #64D3BB;
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 16px;
+    border-radius: 7px;
+    padding: 5px 30px;
+}
