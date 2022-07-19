@@ -4,7 +4,7 @@ import { HeaderInnerComponent } from './component/common/header-inner/header-inn
 import { HeaderOuterComponent } from './component/common/header-outer/header-outer.component';
 import { HomeComponent } from './component/pages/home/home.component';
 import { LayoutComponent } from './component/common/layout/layout.component';
-import { NhdcMapComponent } from './component/nhdc-map/nhdc-map.component';
+import { TestComponent } from './component/test/test.component';
 import { LayoutInnerComponent } from './component/common/layout-inner/layout-inner.component';
 import { NdhsMapComponent } from './component/pages/ndhs-map/ndhs-map.component';
 
@@ -15,54 +15,56 @@ const routes: Routes = [
     pathMatch: 'full',
   },
   {
-    path: '', component: LayoutComponent,  children:  [
+    path: '',
+    component: LayoutComponent,
+    children: [
       {
         path: 'Headerinner',
         component: HeaderInnerComponent,
-        data: { title: 'header' }
+        data: { title: 'header' },
       },
       {
         path: 'Headerouter',
         component: HeaderOuterComponent,
-        data: { title: 'header-outer' }
+        data: { title: 'header-outer' },
       },
       {
         path: 'home',
         component: HomeComponent,
-        data: { title: 'home' }
+        data: { title: 'home' },
       },
       {
-        path: 'nhdc-map',
-        component: NhdcMapComponent,
-        data: { title: 'nhdc-map' }
+        path: 'test',
+        component: TestComponent,
+        data: { title: 'test' },
       },
-      
-    ]
+    ],
   },
   {
-    path: '', component: LayoutInnerComponent,  children:  [
+    path: '',
+    component: LayoutInnerComponent,
+    children: [
       {
         path: 'Headerinner',
         component: HeaderInnerComponent,
-        data: { title: 'header' }
+        data: { title: 'header' },
       },
       {
         path: 'Headerouter',
         component: HeaderOuterComponent,
-        data: { title: 'header-outer' }
+        data: { title: 'header-outer' },
       },
       {
         path: 'NdhsMap',
         component: NdhsMapComponent,
-        data: { title: 'NDHS-Map' }
+        data: { title: 'NDHS-Map' },
       },
-    ]
+    ],
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-  
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
