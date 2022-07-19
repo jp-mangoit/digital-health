@@ -4,6 +4,7 @@ import { HeaderInnerComponent } from './component/common/header-inner/header-inn
 import { HeaderOuterComponent } from './component/common/header-outer/header-outer.component';
 import { HomeComponent } from './component/pages/home/home.component';
 import { LayoutComponent } from './component/common/layout/layout.component';
+import { NhdcMapComponent } from './component/nhdc-map/nhdc-map.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,12 @@ const routes: Routes = [
         component: HomeComponent,
         data: { title: 'home' }
       },
+      {
+        path: 'nhdc-map',
+        component: NhdcMapComponent,
+        data: { title: 'nhdc-map' }
+      },
+      
     ]
   },
 ];
