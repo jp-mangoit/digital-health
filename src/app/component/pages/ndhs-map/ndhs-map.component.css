@@ -18,3 +18,14 @@
     padding: 15px;
     box-shadow: 0px 0px 9px 1px rgb(204 204 204 / 50%);
 }
+.health-card {
+    padding: 10px 15px;
+}
+.top-card {
+    background: red;
+    text-align: center;
+    color: #ccc;
+    font-weight: 500;
+    padding: 3px 0px;
+    border-radius: 25px;
+}
