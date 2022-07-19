@@ -7,6 +7,7 @@ import { LayoutComponent } from './component/common/layout/layout.component';
 import { NhdcMapComponent } from './component/nhdc-map/nhdc-map.component';
 import { LayoutInnerComponent } from './component/common/layout-inner/layout-inner.component';
 import { NdhsMapComponent } from './component/pages/ndhs-map/ndhs-map.component';
+import { FilterAreaComponent } from './component/common/filter-area/filter-area.component';
 
 const routes: Routes = [
   {
@@ -16,16 +17,6 @@ const routes: Routes = [
   },
   {
     path: '', component: LayoutComponent,  children:  [
-      {
-        path: 'Headerinner',
-        component: HeaderInnerComponent,
-        data: { title: 'header' }
-      },
-      {
-        path: 'Headerouter',
-        component: HeaderOuterComponent,
-        data: { title: 'header-outer' }
-      },
       {
         path: 'home',
         component: HomeComponent,
@@ -42,17 +33,7 @@ const routes: Routes = [
   {
     path: '', component: LayoutInnerComponent,  children:  [
       {
-        path: 'Headerinner',
-        component: HeaderInnerComponent,
-        data: { title: 'header' }
-      },
-      {
-        path: 'Headerouter',
-        component: HeaderOuterComponent,
-        data: { title: 'header-outer' }
-      },
-      {
-        path: 'NdhsMap',
+        path: 'ndhs-map',
         component: NdhsMapComponent,
         data: { title: 'NDHS-Map' }
       },

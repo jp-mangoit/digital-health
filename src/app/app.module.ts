@@ -20,6 +20,7 @@ import { NhdcMapComponent } from './component/nhdc-map/nhdc-map.component';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { NdhsMapComponent } from './component/pages/ndhs-map/ndhs-map.component';
 import { LayoutInnerComponent } from './component/common/layout-inner/layout-inner.component';
+import { FilterAreaComponent } from './component/common/filter-area/filter-area.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { LayoutInnerComponent } from './component/common/layout-inner/layout-inn
     NhdcMapComponent,
     NdhsMapComponent,
     LayoutInnerComponent,
+    FilterAreaComponent,
   ],
   imports: [
     BrowserModule,
