@@ -9,7 +9,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatTreeModule } from '@angular/material/tree';
 
 import { AppComponent } from './app.component';
 import { HeaderOuterComponent } from './component/common/header-outer/header-outer.component';
@@ -48,16 +47,10 @@ import { FilterAreaComponent } from './component/common/filter-area/filter-area.
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    MatTreeModule,
     MatCheckboxModule,
     MatFormFieldModule,
     NgxEchartsModule.forRoot({
-      /**
-       * This will import all modules from echarts.
-       * If you only need custom modules,
-       * please refer to [Custom Build] section.
-       */
-      echarts: () => import('echarts'), // or import('./path-to-my-custom-echarts')
+      echarts: () => import('echarts'),
     }),
   ],
   providers: [],
