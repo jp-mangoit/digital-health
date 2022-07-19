@@ -8,13 +8,13 @@ import am5geodata_worldLow from '@amcharts/amcharts5-geodata/worldLow';
 import { EChartsOption } from 'echarts';
 
 @Component({
-  selector: 'app-nhdc-map',
-  templateUrl: './nhdc-map.component.html',
-  styleUrls: ['./nhdc-map.component.css'],
+  selector: 'app-test',
+  templateUrl: './test.component.html',
+  styleUrls: ['./test.component.css'],
 })
-export class NhdcMapComponent implements OnInit {
+export class TestComponent implements OnInit {
   constructor() {}
-  
+
   chartOption: EChartsOption = {
     xAxis: {
       type: 'category',
@@ -47,21 +47,23 @@ export class NhdcMapComponent implements OnInit {
       })
     );
 
-    let cities = {
+    let cities:any = {
       "type": "FeatureCollection",
       "features": [{
         "type": "Feature",
         "properties": {
-          "name": "New York City"
+          "name": "India",
+          "id": "India"
         },
         "geometry": {
           "type": "Point",
-          "coordinates": [-73.778137, 40.641312]
+          "coordinates": [78.96288, 20.593684]
         }
       }, {
         "type": "Feature",
         "properties": {
-          "name": "London"
+          "name": "London",
+          "id": "London"
         },
         "geometry": {
           "type": "Point",
@@ -70,7 +72,8 @@ export class NhdcMapComponent implements OnInit {
       }, {
         "type": "Feature",
         "properties": {
-          "name": "Beijing"
+          "name": "Beijing",
+          "id": "Beijing"
         },
         "geometry": {
           "type": "Point",
@@ -80,20 +83,37 @@ export class NhdcMapComponent implements OnInit {
     };
 
     //Create point series
-    // let pointSeries = chart.series.push(
-    //   am5map.MapPointSeries.new(root, {
-    //     geoJSON: cities,
-    //     exclude: ['AQ'],
-    //   })
-    // );
+    let pointSeries = chart.series.push(
+      am5map.MapPointSeries.new(root, {
+        geoJSON: cities,
+        exclude: ['AQ'],
+      })
+    );
 
-    // pointSeries.bullets.push(function () {
-    //   return am5.Bullet.new(root, {
-    //     sprite: am5.Circle.new(root, {
-    //       radius: 5,
-    //       fill: am5.color(0xff0000),
-    //     }),
-    //   });
-    // });
+    // pointSeries.data.setAll([{
+    //   geometry: {
+    //     type: "Point",
+    //     coordinates: [78.96288, 20.593684]
+    //   }
+    // }, {
+    //   geometry: {
+    //     type: "Point",
+    //     coordinates: [-0.454296, 51.470020]
+    //   }
+    // }, {
+    //   geometry: {
+    //     type: "Point",
+    //     coordinates: [116.597504, 40.072498]
+    //   }
+    // }]);
+
+    pointSeries.bullets.push(function () {
+      return am5.Bullet.new(root, {
+        sprite: am5.Circle.new(root, {
+          radius: 5,
+          fill: am5.color(0xff0000),
+        }),
+      });
+    });
   }
 }
