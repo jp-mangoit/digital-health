@@ -1,130 +1,279 @@
-.tree, .tree ul {
-    margin:0;
-    padding:0;
-    list-style:none
-}
+.tree,
 .tree ul {
-    margin-left:1em;
-    position:relative
+    margin: 0;
+    padding: 0;
+    list-style: none
 }
+
+.tree ul {
+    margin-left: 1em;
+    position: relative
+}
+
 .tree ul ul {
-    margin-left:.5em
+    margin-left: .5em
 }
+
 .tree ul:before {
-    content:"";
-    display:block;
-    width:0;
-    position:absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    border-left:1px solid
+    content: "";
+    display: block;
+    width: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    border-left: 1px solid
 }
+
 .tree li {
-    margin:0;
-    padding:0 1em;
-    line-height:2em;
-    color:#369;
-    font-weight:700;
-    position:relative
+    margin: 0;
+    padding: 0 1em;
+    line-height: 2em;
+    color: #369;
+    font-weight: 700;
+    position: relative
 }
+
 .tree ul li:before {
-    content:"";
-    display:block;
-    width:10px;
-    height:0;
-    border-top:1px solid;
-    margin-top:-1px;
-    position:absolute;
-    top:1em;
-    left:0
+    content: "";
+    display: block;
+    width: 10px;
+    height: 0;
+    border-top: 1px solid;
+    margin-top: -1px;
+    position: absolute;
+    top: 1em;
+    left: 0
 }
+
 .tree ul li:last-child:before {
-    background:#fff;
-    height:auto;
-    top:1em;
-    bottom:0
+    background: #fff;
+    height: auto;
+    top: 1em;
+    bottom: 0
 }
+
 .indicator {
-    margin-right:5px;
+    margin-right: 5px;
 }
+
 .tree li a {
     text-decoration: none;
-    color:#369;
+    color: #369;
 }
-.tree li button, .tree li button:active, .tree li button:focus {
+
+.tree li button,
+.tree li button:active,
+.tree li button:focus {
     text-decoration: none;
-    color:#369;
-    border:none;
-    background:transparent;
-    margin:0px 0px 0px 0px;
-    padding:0px 0px 0px 0px;
+    color: #369;
+    border: none;
+    background: transparent;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
     outline: 0;
 }
+
 .mat-form-field {
     margin-right: 4px;
-  }
+}
 
-  .example-tree-invisible {
+.example-tree-invisible {
     display: none;
-  }
-  
-  .example-tree ul,
-  .example-tree li {
+}
+
+.example-tree ul,
+.example-tree li {
     margin-top: 0;
     margin-bottom: 0;
     list-style-type: none;
-  }
-  
-  /*
+}
+
+/*
    * This padding sets alignment of the nested nodes.
    */
-  .example-tree .mat-nested-tree-node div[role=group] {
+.example-tree .mat-nested-tree-node div[role=group] {
     padding-left: 40px;
-  }
-  
-  /*
+}
+
+/*
    * Padding for leaf nodes.
    * Leaf nodes need to have padding so as to align with other non-leaf nodes
    * under the same parent.
    */
-  .example-tree div[role=group] > .mat-tree-node {
+.example-tree div[role=group]>.mat-tree-node {
     padding-left: 40px;
-  }
+}
+
 .treeview-area mat-nested-tree-node.mat-nested-tree-node div#sub-category .mat-tree-node {
     font-size: 15px;
     background-color: transparent;
     color: #717171;
 }
-.treeview-area mat-nested-tree-node.mat-nested-tree-node #parent-node.mat-tree-node {
+
+.treeview-area mat-nested-tree-node.mat-nested-tree-node[aria-expanded=true] .mat-tree-node,
+.treeview-area mat-tree.mat-tree #sub-parent.mat-tree-node[aria-expanded=true] {
     background: #5380CD;
     color: #fff;
     font-size: 15px;
     margin-bottom: 15px;
     position: relative;
     z-index: 99;
+    min-height: 42px;
+    border-radius: 5px;
 
 }
+
 .treeview-area mat-nested-tree-node.mat-nested-tree-node .mat-tree-node {
     min-height: 42px;
     border-radius: 5px;
 }
-.example-tree .mat-nested-tree-node div[role=group]{
+
+.example-tree .mat-nested-tree-node div[role=group] {
     padding-left: 26px;
 }
-.treeview-area mat-nested-tree-node.mat-nested-tree-node{
+
+.treeview-area mat-nested-tree-node.mat-nested-tree-node {
     position: relative;
 }
-.treeview-area mat-nested-tree-node.mat-nested-tree-node:after {
+
+.treeview-area {
+    margin: 2rem 0;
+}
+
+a.accordion-heading.collapsed.parent_anchor.active+ul#submenu1 {
+    display: block;
+}
+
+li.site-menu-item {
+    display: inline-block;
+    width: 100%;
+}
+
+li.site-menu-item a,
+ul.co-sub-menu-last li a {
+    font-size: 15px;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #5380CD;
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+li.site-menu-item svg {
+    fill: #5380CD;
+    stroke: #5380CD;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+li.site-menu-item.active svg {
+    color: #fff;
+}
+
+li.site-menu-sub.menu-level-2 a svg {
+    stroke: transparent !important;
+}
+
+li.site-menu-item.parent-lavel.active a.parent_anchor {
+    background-color: #5380CD;
+    border-radius: 3px;
+    color: #fff;
+}
+
+li.site-menu-item.parent-lavel a.parent_anchor {
+    margin: 15px 0px;
+}
+
+ul.co-sub-menu-last,
+ul.co-sub-menu {
+    padding-left: 15px;
+}
+
+ul.co-sub-menu-last li a {
+    padding: 10px 15px !important;
+    font-size: 12px !important;
+    color: #5380CD;
+}
+
+li.site-menu-item.has-sub.parent-lavel.active ul#submenu-parent {
+    display: block;
+    padding-left: 15px;
+}
+
+li.site-menu-item.has-sub.parent-lavel {
+    position: relative;
+}
+
+li.site-menu-item {
+    list-style: none;
+}
+
+ul.co-sub-menu {
+    display: none;
+}
+
+ul.co-sub-menu.level-3 {
+    display: block;
+}
+
+li.site-menu-item.active li:after {
     content: '';
     position: absolute;
     width: 1px;
     height: 100%;
-    left: 1px;
+    left: 0px;
     background: #ccc;
-    top: 0;
-    z-index: 88;
+    top: 1px;
+    z-index: 666;
 }
-.treeview-area {
-    margin: 2rem 0;
+
+/* li.site-menu-item.active.parent-lavel a:after {
+    top: 15px;
+} */
+li.site-menu-item.active ul#submenu-parent li,
+li.site-menu-item.active.parent-lavel {
+    position: relative;
+}
+
+li.site-menu-item.active ul#submenu-parent li a:before,
+li.site-menu-item.active a:before {
+    width: 15px;
+    content: '';
+    position: absolute;
+    height: 1px;
+    background: #ccc;
+    left: 0px;
+}
+
+li.site-menu-item.active a:before {
+    background: transparent;
+}
+
+.breadcrumb button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: #5380CD;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.breadcrumb {
+    padding: 0 10px;
+}
+
+.breadcrumb button svg {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    position: relative;
+    top: -2px;
+}
+
+body.mat-typography .sidebar-toggle-menu {
+    width: 75px;
 }

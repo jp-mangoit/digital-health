@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HeaderInnerComponent } from './component/common/header-inner/header-inner.component';
-import { HeaderOuterComponent } from './component/common/header-outer/header-outer.component';
 import { HomeComponent } from './component/pages/home/home.component';
 import { LayoutComponent } from './component/common/layout/layout.component';
 import { TestComponent } from './component/test/test.component';
@@ -19,16 +17,6 @@ const routes: Routes = [
     component: LayoutComponent,
     children: [
       {
-        path: 'Headerinner',
-        component: HeaderInnerComponent,
-        data: { title: 'header' },
-      },
-      {
-        path: 'Headerouter',
-        component: HeaderOuterComponent,
-        data: { title: 'header-outer' },
-      },
-      {
         path: 'home',
         component: HomeComponent,
         data: { title: 'home' },
@@ -45,17 +33,7 @@ const routes: Routes = [
     component: LayoutInnerComponent,
     children: [
       {
-        path: 'Headerinner',
-        component: HeaderInnerComponent,
-        data: { title: 'header' },
-      },
-      {
-        path: 'Headerouter',
-        component: HeaderOuterComponent,
-        data: { title: 'header-outer' },
-      },
-      {
-        path: 'NdhsMap',
+        path: 'ndhs-map',
         component: NdhsMapComponent,
         data: { title: 'NDHS-Map' },
       },
