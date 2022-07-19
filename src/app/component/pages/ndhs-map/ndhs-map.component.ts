@@ -16,7 +16,7 @@ export class NdhsMapComponent implements OnInit {
       {
         name: 'Nightingale Chart',
         type: 'pie',
-        radius: [50, 75],
+        radius: [80, 55],
         center: ['50%', '50%'],
         data: [
           { value: 40, name: 'A' },

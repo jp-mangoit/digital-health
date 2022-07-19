@@ -1,6 +1,7 @@
 .panel-heading {
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .panel-heading h2 {
@@ -15,17 +16,35 @@
 }
 
 .panel {
-    padding: 15px;
+    padding: 25px 15px;
     box-shadow: 0px 0px 9px 1px rgb(204 204 204 / 50%);
+    margin-bottom: 30px;
 }
 .health-card {
-    padding: 10px 15px;
+    padding: 20px 15px;
+    border: none;
+    box-shadow: 0px 0px 8px 1px rgb(204 204 204 / 70%);
+    border-radius: 10px;
 }
 .top-card {
-    background: red;
+    background: #CED6E3;
     text-align: center;
-    color: #ccc;
+    color: #717171;
     font-weight: 500;
     padding: 3px 0px;
     border-radius: 25px;
+}
+.bottom-card .col .progress-style {
+    background: #CED6E3;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.bottom-card span {
+    font-weight: 500;
+    font-size: 12px;
+}
+.progress {
+    height: 10px;
+    box-shadow: 0px 0px 6px 1px #93a6c3;
+    margin: 5px 0px;
 }

@@ -9,6 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatTabsModule} from '@angular/material/tabs';
 
 import { AppComponent } from './app.component';
 import { HeaderOuterComponent } from './component/common/header-outer/header-outer.component';
@@ -49,6 +50,7 @@ import { FilterAreaComponent } from './component/common/filter-area/filter-area.
     MatButtonModule,
     MatCheckboxModule,
     MatFormFieldModule,
+    MatTabsModule,
     NgxEchartsModule.forRoot({
       echarts: () => import('echarts'),
     }),
