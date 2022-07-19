@@ -16,6 +16,8 @@ import { SidebarComponent } from './component/common/sidebar/sidebar.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NhdcMapComponent } from './component/nhdc-map/nhdc-map.component';
+import { NgxEchartsModule } from 'ngx-echarts';
 import { NdhsMapComponent } from './component/pages/ndhs-map/ndhs-map.component';
 import { LayoutInnerComponent } from './component/common/layout-inner/layout-inner.component';
 
@@ -28,6 +30,7 @@ import { LayoutInnerComponent } from './component/common/layout-inner/layout-inn
     HomeComponent,
     FooterComponent,
     SidebarComponent,
+    NhdcMapComponent,
     NdhsMapComponent,
     LayoutInnerComponent,
   ],
@@ -43,6 +46,14 @@ import { LayoutInnerComponent } from './component/common/layout-inner/layout-inn
     MatTreeModule,
     MatCheckboxModule,
     MatFormFieldModule,
+    NgxEchartsModule.forRoot({
+      /**
+       * This will import all modules from echarts.
+       * If you only need custom modules,
+       * please refer to [Custom Build] section.
+       */
+      echarts: () => import('echarts'), // or import('./path-to-my-custom-echarts')
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],
