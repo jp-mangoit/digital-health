@@ -1,3 +1,66 @@
+.tree, .tree ul {
+    margin:0;
+    padding:0;
+    list-style:none
+}
+.tree ul {
+    margin-left:1em;
+    position:relative
+}
+.tree ul ul {
+    margin-left:.5em
+}
+.tree ul:before {
+    content:"";
+    display:block;
+    width:0;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    border-left:1px solid
+}
+.tree li {
+    margin:0;
+    padding:0 1em;
+    line-height:2em;
+    color:#369;
+    font-weight:700;
+    position:relative
+}
+.tree ul li:before {
+    content:"";
+    display:block;
+    width:10px;
+    height:0;
+    border-top:1px solid;
+    margin-top:-1px;
+    position:absolute;
+    top:1em;
+    left:0
+}
+.tree ul li:last-child:before {
+    background:#fff;
+    height:auto;
+    top:1em;
+    bottom:0
+}
+.indicator {
+    margin-right:5px;
+}
+.tree li a {
+    text-decoration: none;
+    color:#369;
+}
+.tree li button, .tree li button:active, .tree li button:focus {
+    text-decoration: none;
+    color:#369;
+    border:none;
+    background:transparent;
+    margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+    outline: 0;
+}
 .mat-form-field {
     margin-right: 4px;
   }
@@ -28,3 +91,40 @@
   .example-tree div[role=group] > .mat-tree-node {
     padding-left: 40px;
   }
+.treeview-area mat-nested-tree-node.mat-nested-tree-node div#sub-category .mat-tree-node {
+    font-size: 15px;
+    background-color: transparent;
+    color: #717171;
+}
+.treeview-area mat-nested-tree-node.mat-nested-tree-node #parent-node.mat-tree-node {
+    background: #5380CD;
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 99;
+
+}
+.treeview-area mat-nested-tree-node.mat-nested-tree-node .mat-tree-node {
+    min-height: 42px;
+    border-radius: 5px;
+}
+.example-tree .mat-nested-tree-node div[role=group]{
+    padding-left: 26px;
+}
+.treeview-area mat-nested-tree-node.mat-nested-tree-node{
+    position: relative;
+}
+.treeview-area mat-nested-tree-node.mat-nested-tree-node:after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    left: 1px;
+    background: #ccc;
+    top: 0;
+    z-index: 88;
+}
+.treeview-area {
+    margin: 2rem 0;
+}

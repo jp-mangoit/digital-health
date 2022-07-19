@@ -18,6 +18,11 @@ const TREE_DATA: any = [
           },
         ],
       },
+      {
+        name: 'Comparative Results',
+        children: [
+        ],
+      },
     ],
   },
 ];

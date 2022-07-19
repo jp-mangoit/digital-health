@@ -2,3 +2,24 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+/* Sidebar css start */
+.sidebar-toggle-menu {
+    float: left;
+    width: 250px;
+}
+.main-content {
+    position: relative;
+    float: right;
+    width: calc(100% - 250px);
+    background-color: #e9ebf1;
+}
+.sidebar-main {
+    padding: 20px 16px;
+}
+/* footer css start */
+footer {
+    display: inline-block;
+    width: 100%;
+}

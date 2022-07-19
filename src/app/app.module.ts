@@ -18,7 +18,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NhdcMapComponent } from './component/nhdc-map/nhdc-map.component';
 import { NgxEchartsModule } from 'ngx-echarts';
-
+import { NdhsMapComponent } from './component/pages/ndhs-map/ndhs-map.component';
+import { LayoutInnerComponent } from './component/common/layout-inner/layout-inner.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,8 @@ import { NgxEchartsModule } from 'ngx-echarts';
     FooterComponent,
     SidebarComponent,
     NhdcMapComponent,
+    NdhsMapComponent,
+    LayoutInnerComponent,
   ],
   imports: [
     BrowserModule,
