@@ -47,10 +47,42 @@ export class NhdcMapComponent implements OnInit {
       })
     );
 
-    // Create point series
+    let cities = {
+      "type": "FeatureCollection",
+      "features": [{
+        "type": "Feature",
+        "properties": {
+          "name": "New York City"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-73.778137, 40.641312]
+        }
+      }, {
+        "type": "Feature",
+        "properties": {
+          "name": "London"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-0.454296, 51.470020]
+        }
+      }, {
+        "type": "Feature",
+        "properties": {
+          "name": "Beijing"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [116.597504, 40.072498]
+        }
+      }]
+    };
+
+    //Create point series
     // let pointSeries = chart.series.push(
     //   am5map.MapPointSeries.new(root, {
-    //     geoJSON: am5geodata_worldLow,
+    //     geoJSON: cities,
     //     exclude: ['AQ'],
     //   })
     // );
