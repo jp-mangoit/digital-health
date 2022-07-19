@@ -1,44 +1,64 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-p{ font-size: 16px; font-weight: normal;}
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+p {
+    font-size: 16px;
+    font-weight: normal;
+}
 
 /* Sidebar css start */
 .sidebar-toggle-menu {
     float: left;
 }
+
 .main-content {
     position: relative;
     float: right;
-    background-color: #e9ebf1;
+    background-color: #fff;
     padding: 20px 16px;
 }
+
 .sidebar-main {
     padding: 20px 16px;
 }
+
 /* footer css start */
 footer {
     display: inline-block;
     width: 100%;
 }
+
 body.mat-typography .sidebar-toggle-menu .treeview-area {
     display: none;
     animation: animateright 0.4s;
     position: relative;
 }
+
 body.mat-typography.site-menubar-fold .sidebar-toggle-menu .treeview-area {
     display: block;
 }
-body.mat-typography .sidebar-toggle-menu  {
+
+body.mat-typography .sidebar-toggle-menu {
     width: 0px;
 }
-body.mat-typography.site-menubar-fold .sidebar-toggle-menu{
+
+body.mat-typography.site-menubar-fold .sidebar-toggle-menu {
     width: 250px;
 }
-body.mat-typography .main-content  {
+
+body.mat-typography .main-content {
     width: calc(100% - 0px);
 }
-body.mat-typography.site-menubar-fold .main-content{
+
+body.mat-typography.site-menubar-fold .main-content {
     width: calc(100% - 250px);
 }
